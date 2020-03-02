@@ -1,3 +1,7 @@
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
 $("#searchButton").on("click", function() {
     var urlbase = "https://pixabay.com/api/?";
     urlbase += "key=15450334-54c089ab058c7a8209a75c73b";
@@ -8,12 +12,28 @@ $("#searchButton").on("click", function() {
     urlbase += '&q='+ searchString;
     urlbase += '&orientation=' + $("#orientationSelection").val();
     urlbase += '&image_type=vector';
-//https://pixabay.com/api/?key=5589438-47a0bca778bf23fc2e8c5bf3e&q=sun&orientation=vertical&image_type=vector
+
     $.ajax({
         method: "GET",
         url: urlbase,
         dataType: "json",
         success: function(result, status){
+            var picCount = result.hits.length;
+            var picIndex1 = getRandomInt(picCount-1);
+            var picIndex2 = getRandomInt(picCount-1);
+            var picIndex3 = getRandomInt(picCount-1);
+            var picIndex4 = getRandomInt(picCount-1);
+            
+            var img1 = result.hits[picIndex1].webformatURL;
+            var img1 = result.hits[picIndex2].webformatURL;
+            var img1 = result.hits[picIndex3].webformatURL;
+            var img1 = result.hits[picIndex4].webformatURL;
+            
+            $("#img1").attr("src",img1);
+            $("#img2").attr("src",img2);
+            $("#img3").attr("src",img3);
+            $("#img4").attr("src",img4);
+            
             console.log(result);
         },
         error: function(status, error){
