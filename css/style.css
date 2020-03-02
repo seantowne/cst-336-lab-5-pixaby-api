@@ -1,3 +1,7 @@
-img{
+.result {
     display: inline;
+}
+
+#mainContent {
+    text-align: center; 
 }
