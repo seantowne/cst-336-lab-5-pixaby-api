@@ -4,7 +4,7 @@ $("#searchButton").on("click", function() {
     var searchString = $("#searchTermInput").val();
     var searchQuery = "";
     for ( var s in searchString.split(' ') ){
-        searchQuery += searchString[s] + "%20";
+        searchQuery += searchString.split(' ')[s] + "%20";
     }
     console.log(searchQuery);
     //$.ajax({
