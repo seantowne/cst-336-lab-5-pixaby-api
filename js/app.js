@@ -11,7 +11,7 @@ $("#searchButton").on("click", function() {
     
     urlbase += '&q='+ searchString;
     urlbase += '&orientation=' + $("#orientationSelection").val();
-    urlbase += '&image_type=vector';
+    urlbase += '&image_type=photo';
 
     $.ajax({
         method: "GET",
