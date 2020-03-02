@@ -6,13 +6,13 @@ $("#searchButton").on("click", function() {
     for ( var s in searchString.split(' ') ){
         searchQuery += s + "%20";
     }
-    console.log("searchQuery");
+    console.log(searchQuery);
     //$.ajax({
     //    method: "GET",
     //    url: ""
     //});
 });
-
+/*
 $.ajax({
         method: "GET",
         url: "https://cst-336-hw-2-calculator.herokuapp.com/evaluate/",
@@ -31,3 +31,4 @@ $.ajax({
             $("#expression").val("error");
         }
     });
+*/
