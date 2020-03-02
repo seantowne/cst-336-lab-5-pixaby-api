@@ -20,6 +20,7 @@ $("#searchButton").on("click", function() {
         dataType: "json",
         success: function(result, status){
             if ( !result ) return;
+            if ( result.hits.length == 0 ) return;
             var picCount = result.hits.length;
             var picIndex1 = getRandomInt(picCount-1);
             var picIndex2 = getRandomInt(picCount-1);
