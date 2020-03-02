@@ -34,6 +34,7 @@ $("#searchButton").on("click", function() {
             console.log(img2);
             console.log(img3);
             console.log(img4);
+            console.log("end urls");
             
             $("#img1").attr("src",img1);
             $("#img2").attr("src",img2);
