@@ -12,6 +12,7 @@ $("#searchButton").on("click", function() {
     urlbase += '&q='+ searchString;
     urlbase += '&orientation=' + $("#orientationSelection").val();
     urlbase += '&image_type=photo';
+    urlbase += '&per_page=200';
 
     $.ajax({
         method: "GET",
