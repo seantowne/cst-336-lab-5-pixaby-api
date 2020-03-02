@@ -1,5 +1,5 @@
 $("#searchButton").on("click", function() {
-    var urlbase = "https://pixabay.com/api/";
+    var urlbase = "https://pixabay.com/api/?";
     urlbase += "key=15450334-54c089ab058c7a8209a75c73b";
     
     var searchString = $("#searchTermInput").val();
