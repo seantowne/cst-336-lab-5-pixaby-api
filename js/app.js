@@ -3,7 +3,7 @@ $("#searchButton").on("click", function() {
     urlbase += "key=15450334-54c089ab058c7a8209a75c73b";
     
     var searchString = $("#searchTermInput").val();
-    var searchString = searchString.replace(/ /g, '%20');
+    var searchString = searchString.replace(/ /g, '+');
     
     urlbase += '&q='+ searchString;
     urlbase += '&orientation=' + $("#orientationSelection").val();
