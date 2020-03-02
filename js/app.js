@@ -29,6 +29,11 @@ $("#searchButton").on("click", function() {
             var img1 = result.hits[picIndex3].webformatURL;
             var img1 = result.hits[picIndex4].webformatURL;
             
+            console.log(img1);
+            console.log(img2);
+            console.log(img3);
+            console.log(img4);
+            
             $("#img1").attr("src",img1);
             $("#img2").attr("src",img2);
             $("#img3").attr("src",img3);
