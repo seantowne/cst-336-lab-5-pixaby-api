@@ -11,6 +11,6 @@ h1 {
 
 
 #inputDiv {
-    display: inline-block;
+    width: max-content;
     margin: auto;
 }
