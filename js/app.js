@@ -25,9 +25,9 @@ $("#searchButton").on("click", function() {
             var picIndex4 = getRandomInt(picCount-1);
             
             var img1 = result.hits[picIndex1].webformatURL;
-            var img1 = result.hits[picIndex2].webformatURL;
-            var img1 = result.hits[picIndex3].webformatURL;
-            var img1 = result.hits[picIndex4].webformatURL;
+            var img2 = result.hits[picIndex2].webformatURL;
+            var img3 = result.hits[picIndex3].webformatURL;
+            var img4 = result.hits[picIndex4].webformatURL;
             
             console.log("urls");
             console.log(img1);
