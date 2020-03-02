@@ -1,19 +1,25 @@
 $("#searchButton").on("click", function() {
     var urlbase = "https://pixabay.com/api/";
     urlbase += "key=15450334-54c089ab058c7a8209a75c73b";
+    
     var searchString = $("#searchTermInput").val();
-    if ( searchString.length == 0 ){
-        alert('Cannot search for nothing');
-    }
-    var searchQuery = "";
-    for ( var s in searchString.split(' ') ){
-        searchQuery += searchString.split(' ')[s] + "%20";
-    }
-    console.log(searchQuery);
-    //$.ajax({
-    //    method: "GET",
-    //    url: ""
-    //});
+    var searchString = searchString.replace(/ /g, '%20');
+    
+    urlbase += '&q='+ searchString;
+    urlbase += '&orientation=' + $("#orientationSelection").val();
+    urlbase += '&image_type=vector';
+//https://pixabay.com/api/?key=5589438-47a0bca778bf23fc2e8c5bf3e&q=sun&orientation=vertical&image_type=vector
+    $.ajax({
+        method: "GET",
+        url: urlbase,
+        dataType: "json",
+        success: function(result, status){
+            console.log(result);
+        },
+        error: function(status, error){
+            console.log('something went wrong');
+        }
+    });
 });
 /*
 $.ajax({
