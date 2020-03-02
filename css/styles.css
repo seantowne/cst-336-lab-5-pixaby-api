@@ -15,10 +15,12 @@ span {
 
 .result{
     float: left;
-    width: 100px;
     padding: 5px;
 }
 
+img{
+    width: 30%;
+}
 
 
 #inputDiv {
